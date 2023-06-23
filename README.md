@@ -4,6 +4,16 @@ A simple PHP based URL Shortener.
 ## Implementation Demo
 A "TheDoggyBrad" branded implementation can be found on https://url.x10.bz/
 
+## Features
+✓Lightweight<br>
+✓Easy access to database<br>
+✓Immediately Ready to use (After File Upload to Server)<br>
+✓No need for a database<br>
+✓No Third Party Scripts/Libraries<br>
+✓Fast Link Generation<br>
+✓Easy to use<br>
+✓No need for an account
+
 ## Credits
 OpenAI's ChatGPT for making the majority of this project's code.
 
