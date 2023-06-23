@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>URL Shortener</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"] {
+            font-size: 16px;
+            padding: 10px;
+            width: 300px;
+            margin-bottom: 20px;
+        }
+
+        button[type="submit"] {
+            font-size: 16px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        #shortened-url {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+
+        footer {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <img width="64" height="64" src="logo.png" alt="logo">
+    <h1>URL Shortener</h1>
+    <h3>Shorten your URL now!</h3><br>
+    <form id="shorten-form" action="shorten.php" method="post">
+        <label for="url">Enter a valid URL:</label>
+        <input type="text" id="url" name="url" required>
+        <button type="submit">Shorten</button>
+    </form>
+    <br>
+    <div id="shortened-url"></div>
+  
+    <footer style="margin-top: 150px;">
+      <p>&copy; 2023 URL Shortener</a>. All rights reserved.</p>
+    </footer>
+  
+    <script>
+        const form = document.getElementById('shorten-form');
+        const shortenedUrlElement = document.getElementById('shortened-url');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const urlInput = document.getElementById('url');
+            const url = urlInput.value;
+
+            fetch(form.action, {
+                method: form.method,
+                body: new URLSearchParams(new FormData(form))
+            })
+            .then(response => response.text())
+            .then(data => {
+                shortenedUrlElement.innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        });
+    </script>
+</body>
+</html>
