@@ -5,7 +5,7 @@ A simple PHP based URL Shortener.
 A "TheDoggyBrad" branded implementation can be found on https://url.x10.bz/
 
 ## Credits
-OpenAI's ChatGPT for making thr majority of this project's code.
+OpenAI's ChatGPT for making the majority of this project's code.
 
 ## How this works?
 •.htaccess - This is a crucial file, that makes every traffic redirect to redirect.php<br>
