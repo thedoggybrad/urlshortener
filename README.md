@@ -13,7 +13,7 @@ A "TheDoggyBrad" branded implementation can be found on https://url.x10.bz/
 ✓Fast Link Generation<br>
 ✓Easy to use<br>
 ✓No need for an account<br>
-✓Almost all functions are performed server side
+✓Almost all functions are performed on the server side
 
 ## Credits
 OpenAI's ChatGPT for making the majority of this project's code.
