@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $dom->save('urls.xml');
 
         // Return the shortened URL as response
-        $shortURL = 'https://url.x10.bz/' . $shortCode;
+        $shortURL = 'https://' . $_SERVER['HTTP_HOST'] . '/' . $shortCode;
         echo 'Shortened URL: <a href="' . $shortURL . '">' . $shortURL . '</a>';
         exit;
     } else {
