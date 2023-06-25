@@ -17,7 +17,8 @@ A "TheDoggyBrad" branded implementation can be found on https://url.x10.bz/
 ✓Copy button for generated shortened URLs
 
 ## Credits
-OpenAI's ChatGPT for making the majority of this project's code.
+✓OpenAI's ChatGPT for making the majority of this project's code.<br>
+✓TheDoggyBrad for supervising and managing the development of this software
 
 ## How this works?
 •.htaccess - This is a crucial file, that makes every traffic redirect to redirect.php<br>
