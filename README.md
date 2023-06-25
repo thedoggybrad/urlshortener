@@ -1,3 +1,5 @@
+<img src="android-chrome-192x192.png" alt="LOGO" width="96"  height="96">
+
 # URL Shortener
 A simple PHP based URL Shortener.
 
