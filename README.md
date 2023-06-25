@@ -32,8 +32,10 @@ Note: The source code in this repository is not having any brandings, the name o
 ## Possible Security Concern Answered
 The database is an xml file? Well, just change the permission to only the server will be the only one allowed to view that file (Disallow Public Viewing).
 There will be no problems if the public cannot view the xml file because the redirection and link generation happens in the server side.<br><br>
-Here's a proof! Visit https://url.x10.bz/urls.xml and you will see an Error 403 instead of a file. Then visit https://url.x10.bz and try generating and visiting the shorten link. It works right?
+Here's a proof! Visit https://url.x10.bz/urls.xml and you will see an HTTP error 403 instead of the actual xml file. Then visit https://url.x10.bz and try generating and visiting the shorten link. It works right?
 
 ## Why an XML File as a database?
 Well, XML is used for ease of speed and faster link deletion (if ever). And there will be no other problems about setting up a database anymore.
+
+
                                                                            
