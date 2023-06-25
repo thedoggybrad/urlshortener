@@ -3,6 +3,7 @@
 <head>
     <title>URL Shortener</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -28,7 +29,14 @@
             margin-bottom: 20px;
         }
 
-        button[type="submit"] {
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .button-container button {
             font-size: 16px;
             padding: 10px 20px;
             background-color: #4CAF50;
@@ -37,8 +45,27 @@
             text-align: center;
             text-decoration: none;
             display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
+            margin: 4px;
+            cursor: pointer;
+        }
+      
+         .copyico {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .copyico button {
+            font-size: 13px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            margin: 2px;
             cursor: pointer;
         }
 
@@ -59,18 +86,22 @@
     <form id="shorten-form" action="shorten.php" method="post">
         <label for="url">Enter a valid URL:</label>
         <input type="text" id="url" name="url" required>
-        <button type="submit">Shorten</button>
+        <div class="button-container">
+            <button type="submit" id="shorten-button">Shorten!</button>
+        </div>
     </form>
     <br>
-    <div id="shortened-url"></div>
-  
+    <div id="shortened-url"></div><br><div class="copyico"><button type="button" id="copy-button"><i class="far fa-copy"></i></button></div>
+
     <footer style="margin-top: 150px;">
-      <p>&copy; 2023 URL Shortener</a>. All rights reserved.</p>
+      <p>&copy; 2023 URL Shortener. All rights reserved.</p>
     </footer>
-  
+
     <script>
         const form = document.getElementById('shorten-form');
         const shortenedUrlElement = document.getElementById('shortened-url');
+        const shortenButton = document.getElementById('shorten-button');
+        const copyButton = document.getElementById('copy-button');
 
         form.addEventListener('submit', function(event) {
             event.preventDefault();
@@ -85,11 +116,26 @@
             .then(response => response.text())
             .then(data => {
                 shortenedUrlElement.innerHTML = data;
+                copyButton.disabled = false;
             })
             .catch(error => {
                 console.error('Error:', error);
             });
         });
+
+    copyButton.addEventListener('click', function() {
+    const range = document.createRange();
+    range.selectNode(shortenedUrlElement);
+    window.getSelection().removeAllRanges();
+    window.getSelection().addRange(range);
+
+    const copiedText = shortenedUrlElement.textContent;
+    document.execCommand('copy');
+    window.getSelection().removeAllRanges();
+
+    const copiedTextWithoutPrefix = copiedText.replace('Shortened URL: ', '').replace('Invalid URL', '');
+    navigator.clipboard.writeText(copiedTextWithoutPrefix);
+});
     </script>
 </body>
 </html>
