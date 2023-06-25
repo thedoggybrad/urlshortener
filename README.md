@@ -3,6 +3,8 @@ A simple PHP based URL Shortener.
 
 ## Implementation Demo
 A "TheDoggyBrad" branded implementation can be found on https://url.x10.bz/
+<br><br>
+Note: The source code in this repository is not having any brandings, the name of the software in this repository is URL Shortener not "TheDoggyBrad URL Shortener".
 
 ## Features
 ✓Lightweight<br>
@@ -21,10 +23,10 @@ A "TheDoggyBrad" branded implementation can be found on https://url.x10.bz/
 ✓TheDoggyBrad for supervising and managing the development of this software
 
 ## How this works?
-•.htaccess - This is a crucial file, that makes every traffic redirect to redirect.php<br>
-•redirect.php - This file redirects the user to the shortened link or to the index.html file.<br>
-•index.html - This file is the User Interface, which uses shorten.php<br>
-•shorten.php - An essential file where the process of link generation happens that saves the output on the urls.xml<br>
+•.htaccess - This is a crucial file, that makes every traffic redirect to redirect.php.<br>
+•redirect.php - This file redirects the user to the shortened link (if that exists) or to the index.html file (if the shortened link does not exist).<br>
+•index.html - This file is the User Interface, which uses shorten.php. This is where the Shortened URL is presented.<br>
+•shorten.php - An essential file where the process of link generation happens and it saves the output on the urls.xml.<br>
 •urls.xml - The most critical file, it is the database of all the links.
 
 ## Possible Security Concern Answered
