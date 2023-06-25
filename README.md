@@ -45,3 +45,6 @@ Well, XML is used for ease of speed and faster link deletion (if ever). And ther
 2.) If you are not uploading/implementing this on the root directory of your website or using your localhost. Please use modify the index.html, shorten.php and redirect.php files. The urls.xml file is not needed to be modified.
 <br>
 3.) Lastly, modify the software's UI and branding according to your needs and preferences.
+
+## Licensing Agreement
+This is an entirely open-source projecy and you can do whatever you want on it. You can sell, use, redistribute, patent, fork, modify or include it on your other software.
