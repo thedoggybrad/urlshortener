@@ -16,7 +16,9 @@ Note: The source code in this repository is not having any brandings, the name o
 ✓Easy to use<br>
 ✓No need for an account<br>
 ✓Almost all functions are performed on the server side<br>
-✓Copy button for generated shortened URLs
+✓Copy button for generated shortened URLs<br>
+✓Privacy-Friendly<br>
+✓Simply to use and implement
 
 ## Credits
 ✓OpenAI's ChatGPT for making the majority of this project's code.<br>
