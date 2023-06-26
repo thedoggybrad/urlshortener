@@ -20,7 +20,8 @@ Note: The source code in this repository is not having any brandings, the name o
 ✓Almost all functions are performed on the server side<br>
 ✓Copy button for generated shortened URLs<br>
 ✓Privacy-Friendly<br>
-✓Simply to use and implement
+✓Simply to use and implement<br>
+✓Automatically prevents to generate a duplicate shortened code<br>
 
 ## Credits
 ✓OpenAI's ChatGPT for making the majority of this project's code.<br>
