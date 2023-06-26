@@ -17,6 +17,6 @@ if (!empty($shortCode)) {
 }
 
 // If the short code doesn't exist or the code parameter is empty, redirect to index.html
-header('Location: index.html');
+header('Location: /');
 exit;
 ?>
