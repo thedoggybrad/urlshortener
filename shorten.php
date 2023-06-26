@@ -18,16 +18,28 @@ function generateShortCode() {
     return $shortCode;
 }
 
+// Check if a short code already exists
+function isDuplicateShortCode($xml, $shortCode) {
+    foreach ($xml->url as $urlNode) {
+        if ((string) $urlNode->shortCode === $shortCode) {
+            return true;
+        }
+    }
+    return false;
+}
+
 // Handle the form submission
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $url = $_POST['url'];
 
     if (isValidURL($url)) {
-        // Generate a short code
+        // Generate a unique short code
+        $xml = simplexml_load_file('urls.xml');
         $shortCode = generateShortCode();
 
-        // Load the existing URLs from the XML file
-        $xml = simplexml_load_file('urls.xml');
+        while (isDuplicateShortCode($xml, $shortCode)) {
+            $shortCode = generateShortCode();
+        }
 
         // Create a new URL node
         $urlNode = $xml->addChild('url');
