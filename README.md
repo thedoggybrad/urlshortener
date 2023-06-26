@@ -36,7 +36,7 @@ Note: The source code in this repository is not having any brandings, the name o
 ## Possible Security Concern Answered
 The database is an xml file? Well, just change the permission to only the server will be the only one allowed to view that file (Disallow Public Viewing).
 There will be no problems if the public cannot view the xml file because the redirection and link generation happens in the server side.<br><br>
-Here's a proof! Visit https://url.x10.bz/urls.xml and you will see an HTTP error 403 instead of the actual xml file. Then visit https://url.x10.bz and try generating and visiting the shorten link. It works right?
+Here's a proof! Visit https://url.x10.bz/urls.xml and you will see an HTTP error 403 instead of the actual xml file. Then visit https://url.x10.bz and try generating and visiting the shorten link. It works and even you cannot access the urls.xml file.
 
 ## Why an XML File as a database?
 Well, XML is used for ease of speed and faster link deletion (if ever). And there will be no other problems about setting up a database anymore.
@@ -46,7 +46,11 @@ Well, XML is used for ease of speed and faster link deletion (if ever). And ther
 <br>
 2.) If you are not uploading/implementing this on the root directory of your website or using your localhost. Please use modify the index.html, shorten.php and redirect.php files. The urls.xml file is not needed to be modified.
 <br>
-3.) Lastly, modify the software's UI and branding according to your needs and preferences.
+3.) Modify the software's UI and branding according to your needs and preferences.
+<br>
+4.) Test the software by going to https://whateveryoursiteis.com/directoryifever/test and it should redirect you to https://google.com, if not you may need to modify the files mentioned in step no.2
+<br><br>
+That's it, you have a now a lightweight, non-resource extensive url shortener.
 
 ## Licensing Agreement
 This is an entirely open-source projecy and you can do whatever you want on it. You can sell, use, redistribute, patent, fork, modify or include it on your other software.
