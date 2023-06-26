@@ -13,7 +13,6 @@ Note: The source code in this repository is not having any brandings, the name o
 ✓Easy access to database<br>
 ✓Immediately Ready to use (After File Upload to Server)<br>
 ✓No need for a database<br>
-✓No Third Party Scripts/Libraries<br>
 ✓Fast Link Generation<br>
 ✓Easy to use<br>
 ✓No need for an account<br>
