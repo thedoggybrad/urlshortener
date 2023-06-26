@@ -27,7 +27,7 @@ Note: The source code in this repository is not having any brandings, the name o
 ✓TheDoggyBrad for supervising and managing the development of this software
 
 ## How this works?
-•.htaccess - This is a crucial file, that makes every traffic redirect to redirect.php.<br>
+•.htaccess - This is a very crucial file, that makes every traffic redirect to redirect.php.<br>
 •redirect.php - This file redirects the user to the shortened link (if that exists) or to the index.html file (if the shortened link does not exist).<br>
 •index.html - This file is the User Interface, which uses shorten.php. This is where the Shortened URL is presented.<br>
 •shorten.php - An essential file where the process of link generation happens and it saves the output on the urls.xml.<br>
