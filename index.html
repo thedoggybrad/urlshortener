@@ -103,44 +103,71 @@
     </footer>
 
     <script>
-        const form = document.getElementById('shorten-form');
-        const shortenedUrlElement = document.getElementById('shortened-url');
-        const shortenButton = document.getElementById('shorten-button');
-        const copyButton = document.getElementById('copy-button');
+    const form = document.getElementById('shorten-form');
+    const shortenedUrlElement = document.getElementById('shortened-url');
+    const shortenButton = document.getElementById('shorten-button');
+    const copyButton = document.getElementById('copy-button');
+    let copiedText = '';
 
-        form.addEventListener('submit', function(event) {
-            event.preventDefault();
+ form.addEventListener('submit', function(event) {
+  event.preventDefault();
 
-            const urlInput = document.getElementById('url');
-            const url = urlInput.value;
+  const urlInput = document.getElementById('url');
+  const url = urlInput.value;
 
-            fetch(form.action, {
-                method: form.method,
-                body: new URLSearchParams(new FormData(form))
-            })
-            .then(response => response.text())
-            .then(data => {
-                shortenedUrlElement.innerHTML = data;
-                copyButton.disabled = false;
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
-        });
-
-    copyButton.addEventListener('click', function() {
-    const range = document.createRange();
-    range.selectNode(shortenedUrlElement);
-    window.getSelection().removeAllRanges();
-    window.getSelection().addRange(range);
-
-    const copiedText = shortenedUrlElement.textContent;
-    document.execCommand('copy');
-    window.getSelection().removeAllRanges();
-
-    const copiedTextWithoutPrefix = copiedText.replace('Shortened URL: ', '').replace('Invalid URL', '');
-    navigator.clipboard.writeText(copiedTextWithoutPrefix);
+  fetch(form.action, {
+      method: form.method,
+      body: new URLSearchParams(new FormData(form))
+    })
+    .then(response => response.text())
+    .then(data => {
+      shortenedUrlElement.innerHTML = data;
+      copyButton.disabled = false;
+      copiedText = shortenedUrlElement.textContent;
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
 });
+
+copyButton.addEventListener('click', function() {
+  if (!copiedText) {
+    return; // Do not copy if no URL has been generated yet
+  }
+
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    const copiedTextWithoutPrefix = copiedText.replace('Shortened URL: ', '').replace('Invalid URL', '');
+    navigator.clipboard.writeText(copiedTextWithoutPrefix)
+      .then(() => {
+      })
+      .catch((error) => {
+        console.error('Failed to copy URL to clipboard using the Clipboard API:', error);
+        fallbackCopyToClipboard(copiedTextWithoutPrefix);
+      });
+  } else {
+    fallbackCopyToClipboard(copiedText);
+  }
+});
+
+function fallbackCopyToClipboard(text) {
+  const textarea = document.createElement('textarea');
+  textarea.value = text;
+  textarea.style.position = 'fixed';
+  textarea.style.top = '-9999px';
+  document.body.appendChild(textarea);
+  textarea.select();
+
+  try {
+    if (document.execCommand('copy')) {
+    } else {
+      throw new Error('Copying to clipboard failed.');
+    }
+  } catch (error) {
+    console.error('Failed to copy URL to clipboard using fallback method:', error);
+  }
+
+  document.body.removeChild(textarea);
+}
     </script>
 </body>
 </html>
