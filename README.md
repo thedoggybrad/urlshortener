@@ -4,7 +4,7 @@
 A simple PHP based URL Shortener.
 
 ## Implementation Demo
-A "X10 URL" (Formerly TheDoggyBrad URl Shortener) branded implementation can be found on https://url.x10.bz/
+A "x10 URL" (Formerly TheDoggyBrad URL Shortener) branded implementation can be found on https://url.x10.bz/
 <br><br>
 Note: The source code in this repository is not having any brandings, the name of the software in this repository is "URL Shortener".
 
