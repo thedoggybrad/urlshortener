@@ -4,9 +4,9 @@
 A simple PHP based URL Shortener.
 
 ## Implementation Demo
-A "TheDoggyBrad" branded implementation can be found on https://url.x10.bz/
+A "URL 10 (Formerly TheDoggyBrad URl Shortener)" branded implementation can be found on https://url.x10.bz/
 <br><br>
-Note: The source code in this repository is not having any brandings, the name of the software in this repository is "URL Shortener" not "TheDoggyBrad URL Shortener".
+Note: The source code in this repository is not having any brandings, the name of the software in this repository is "URL Shortener".
 
 ## Features
 ✓Lightweight<br>
