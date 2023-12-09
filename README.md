@@ -4,8 +4,8 @@
 A simple PHP based URL Shortener.
 
 ## Implementation
-This source code was the base for the x10URL™ URL Shortener software that is distributed by x10 URL Shortening Services.<br>
-You can try x10URL™ URL Shortener software on [https://url.x10.bz](https://url.x10.bz).
+This source code was the base for the x10 URL™ URL Shortener software that is distributed by x10 URL Shortening Services.<br>
+You can try x10 URL™ URL Shortener software on [https://url.x10.bz](https://url.x10.bz).
 
 ## Features
 ✓Lightweight<br>
