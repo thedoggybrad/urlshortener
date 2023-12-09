@@ -3,10 +3,9 @@
 # URL Shortener
 A simple PHP based URL Shortener.
 
-## Implementation Demo
-A "x10 URL" (Formerly TheDoggyBrad URL Shortener) branded implementation can be found on https://url.x10.bz/
-<br><br>
-Note: The source code in this repository is not having any brandings, the name of the software in this repository is "URL Shortener".
+## Implementation
+This source code was the base for the x10URL™ URL Shortener software that is distributed by x10 URL Shortening Services.<br>
+You can try x10URL™ URL Shortener software on [https://url.x10.bz](https://url.x10.bz).
 
 ## Features
 ✓Lightweight<br>
