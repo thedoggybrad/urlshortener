@@ -7,6 +7,9 @@ A simple PHP based URL Shortener.
 This source code was the base for the x10 URL™ URL Shortener software that is distributed by x10 URL Shortening Services.<br>
 You can try x10 URL™ URL Shortener software on [https://url.x10.bz](https://url.x10.bz).
 
+## Requirements to run
+✓An Apache webserver that supports PHP 7.2 up to PHP8.3, .htaccess and XML.<br>
+
 ## Features
 ✓Lightweight<br>
 ✓Easy access to database<br>
