@@ -52,7 +52,7 @@ Well, XML is used for ease of speed and faster link deletion (if ever). And ther
 <br>
 4.) Test the software by going to https://whateveryoursiteis.com/directoryifever/test and it should redirect you to https://google.com, if not you may need to modify the files mentioned in step no.2
 <br><br>
-That's it, you have a now a lightweight, non-resource extensive url shortener.
+That's it, you have now a lightweight, non-resource extensive url shortener.
 
 ## Licensing Agreement
 This is an entirely open-source project and you can do whatever you want on it. You can sell, use, redistribute, patent, fork, modify, claim ownership or include it on your other software.
