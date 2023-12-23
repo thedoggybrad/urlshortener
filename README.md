@@ -26,7 +26,7 @@ You can try x10 URL™ URL Shortener software on [https://url.x10.bz](https://ur
 
 ## Credits
 ✓OpenAI's ChatGPT for making the majority of this project's code.<br>
-✓TheDoggyBrad for supervising and managing the development of this software
+✓TheDoggyBrad for supervising, coding and managing the development of this software
 
 ## How this works?
 •.htaccess - This is a very crucial file, that makes every traffic redirect to redirect.php.<br>
