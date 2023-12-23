@@ -36,7 +36,7 @@ You can try x10 URL™ URL Shortener software on [https://url.x10.bz](https://ur
 •urls.xml - The most critical file, it is the database of all the links.
 
 ## Possible Security Concern Answered
-The database is an xml file? Well, just change the permission to only the server will be the only one allowed to view that file (Disallow Public Viewing).
+The database is an xml file? Well, just use the default .htaccess file distributed in this repository as it contains the rule to block public access to the urls.xml file.<br><br>
 There will be no problems if the public cannot view the xml file because the redirection and link generation happens in the server side.<br><br>
 Here's a proof! Visit https://url.x10.bz/urls.xml and you will see an HTTP error 403 instead of the actual xml file. Then visit https://url.x10.bz and try generating and visiting the shorten link. It works and even you cannot access the urls.xml file.
 
