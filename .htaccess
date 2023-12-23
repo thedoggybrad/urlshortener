@@ -1,7 +1,15 @@
+## urls.xml protection
+<Files "urls.xml">
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+## Mandatory HTTPS
 RewriteEngine On
 RewriteCond %{HTTPS} !=on
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
+## URL services redirection
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ redirect.php?code=$1 [QSA,L]
