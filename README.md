@@ -44,7 +44,7 @@ Here's a proof! Visit https://url.x10.bz/urls.xml and you will see an HTTP error
 Well, XML is used for ease of speed and faster link deletion (if ever). And there will be no other problems about setting up a database anymore.
 
 ## How to implement this software on your server/hosting provider?
-1.) Upload this whole Github Repository on your htdocs or public_html (other hosting providers uses other names) folder.
+1.) Download the contents of this repository then extract and upload it on your htdocs or public_html (other hosting providers uses other names) folder.
 <br>
 2.) If you are not uploading/implementing this on the root directory of your website or using your localhost. Please use modify the index.html, shorten.php and redirect.php files. The urls.xml file is not needed to be modified.
 <br>
