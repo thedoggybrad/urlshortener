@@ -1,4 +1,4 @@
-## urls.xml protection
+## Protection for urls.xml file (PATCH)
 <Files "urls.xml">
     Order Allow,Deny
     Deny from all
