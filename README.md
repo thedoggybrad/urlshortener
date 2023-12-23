@@ -12,9 +12,9 @@ You can try x10 URL™ URL Shortener software on [https://url.x10.bz](https://ur
 
 ## Features
 ✓Lightweight<br>
-✓Easy access to database<br>
+✓Easy access to the database<br>
 ✓Immediately Ready to use (After File Upload to Server)<br>
-✓No need for a database<br>
+✓No need for a real database like SQL<br>
 ✓Fast Link Generation<br>
 ✓Easy to use<br>
 ✓No need for an account<br>
