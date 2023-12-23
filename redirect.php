@@ -17,6 +17,7 @@ if (!empty($shortCode)) {
 }
 
 // If the short code doesn't exist or the code parameter is empty, redirect to the root directory
-header('Location: /');
-exit;
+       header("HTTP/1.0 404 Not Found");
+       echo '<meta http-equiv="refresh" content="0;URL=\'/\'" />';
+       exit;
 ?>
