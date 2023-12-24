@@ -55,4 +55,4 @@ Well, XML is used for ease of speed and faster link deletion (if ever). And ther
 That's it, you have now a lightweight, non-resource extensive url shortener.
 
 ## Licensing Agreement
-See https://github.com/thedoggybrad/urlshortener/blob/main/LICENSE.MD
+See https://github.com/thedoggybrad/urlshortener/blob/main/LICENSE
