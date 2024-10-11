@@ -5,7 +5,7 @@ try {
         $shortCode = $_GET['code'];
         
         // Load the URLs from the XML file once
-        $xml = simplexml_load_file('xmlstore/urls.xml');
+        $xml = simplexml_load_file('urls.xml');
         
         // Find the URL with the matching short code using simpler logic
         $urlNode = $xml->xpath("//url[shortCode='$shortCode']");
