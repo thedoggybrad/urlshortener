@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $dom->preserveWhiteSpace = false;
         $dom->formatOutput = true;
         $dom->loadXML($xml->asXML());
-        $dom->save('xmlstore/urls.xml');
+        $dom->save('urls.xml');
 
         // Return the shortened URL
         $shortURL = 'https://' . $_SERVER['HTTP_HOST'] . '/' . $shortCode;
