@@ -1,24 +1,27 @@
 <?php
 // Handle shortened URL requests
-if (isset($_GET['code'])) {
-    $shortCode = $_GET['code'];
-
-    if (!empty($shortCode)) {
-        // Load the URLs from the XML file
+try {
+    if (isset($_GET['code']) && !empty($_GET['code'])) {
+        $shortCode = $_GET['code'];
+        
+        // Load the URLs from the XML file once
         $xml = simplexml_load_file('xmlstore/urls.xml');
-
-        // Find the URL with the matching short code
+        
+        // Find the URL with the matching short code using simpler logic
         $urlNode = $xml->xpath("//url[shortCode='$shortCode']");
 
-        if (!empty($urlNode)) {
-            $originalURL = (string)$urlNode[0]->originalURL;
-            header('Location: ' . $originalURL);
+        if ($urlNode) {
+            header('Location: ' . (string)$urlNode[0]->originalURL);
             exit;
         }
     }
+    
+    // Redirect to the 404 page if not found
+    header("Location: /404");
+    exit;
+} catch (Exception $e) {
+    // Handle error gracefully, could log or display error
+    header("Location: /error");
+    exit;
 }
-
-// If the short code doesn't exist or the code parameter is empty, redirect to the 404 page
-header("Location: /404");
-exit;
 ?>
