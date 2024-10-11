@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (isValidURL($url)) {
         // Load existing URLs once
-        $xml = simplexml_load_file('xmlstore/urls.xml');
+        $xml = simplexml_load_file('urls.xml');
         $existingShortCodes = array_map(function($urlNode) {
             return (string) $urlNode->shortCode;
         }, iterator_to_array($xml->url));
