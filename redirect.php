@@ -17,11 +17,11 @@ try {
     }
     
     // Redirect to the 404 page if not found
-    header("Location: /404");
+    header("Location: 404.shtml");
     exit;
 } catch (Exception $e) {
     // Handle error gracefully, could log or display error
-    header("Location: /error");
+    header("Location: 500.shtml");
     exit;
 }
 ?>
